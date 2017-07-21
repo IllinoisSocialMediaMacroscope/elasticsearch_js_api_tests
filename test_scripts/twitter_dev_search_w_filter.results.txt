@@ -1,0 +1,137 @@
+Elasticsearch INFO: 2017-07-21T18:04:00Z
+  Adding connection to http://search-es-twitter-stream-dev-rzmtjuphpnhuukihhzbhwqtapm.us-west-2.es.amazonaws.com/
+
+Elasticsearch DEBUG: 2017-07-21T18:04:00Z
+  starting request {
+    "method": "POST",
+    "path": "/twitter_dev/tweet/_search",
+    "body": {
+      "query": {
+        "bool": {
+          "must": [
+            {
+              "match": {
+                "user.id_str": "2317452498"
+              }
+            },
+            {
+              "match": {
+                "user.location": "Andorra"
+              }
+            }
+          ],
+          "filter": {
+            "range": {
+              "timestamp_ms": {
+                "gte": "2017-07-20"
+              }
+            }
+          }
+        }
+      }
+    },
+    "query": {
+      "size": 3
+    }
+  }
+  
+
+Elasticsearch TRACE: 2017-07-21T18:04:00Z
+  -> POST http://search-es-twitter-stream-dev-rzmtjuphpnhuukihhzbhwqtapm.us-west-2.es.amazonaws.com:80/twitter_dev/tweet/_search?size=3
+  {
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "match": {
+              "user.id_str": "2317452498"
+            }
+          },
+          {
+            "match": {
+              "user.location": "Andorra"
+            }
+          }
+        ],
+        "filter": {
+          "range": {
+            "timestamp_ms": {
+              "gte": "2017-07-20"
+            }
+          }
+        }
+      }
+    }
+  }
+  <- 200
+  {
+    "took": 23,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 1,
+      "max_score": 27.723148,
+      "hits": [
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "888121759500705792",
+          "_score": 27.723148,
+          "_source": {
+            "text": "Asiste este Domingo 23 de Julio al Auto Show FENADU 2017 \nTuning… https://t.co/MA36wxKGFD",
+            "created_at": "Thu Jul 20 19:41:42 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -105.70327887,
+                26.93530647
+              ]
+            },
+            "timestamp_ms": "1500579702626",
+            "user_mentions": {
+              "screen_name": [],
+              "id": [],
+              "name": [],
+              "id_str": []
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 137,
+              "description": "Futbolista profesional en Club Esportiu Carroi y Periodista en diversos medios de comunicación",
+              "friends_count": 589,
+              "url": "https://www.facebook.com/EliteSport2016/",
+              "created_at": "Wed Jan 29 16:45:07 +0000 2014",
+              "location": "Andorra",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/774626429870931968/RraTXZ0__normal.jpg",
+              "name": "Yair Reyes",
+              "followers_count": 280,
+              "time_zone": "Mexico City",
+              "id_str": "2317452498",
+              "statuses_count": 1259,
+              "listed_count": 3,
+              "id": 2317452498,
+              "screen_name": "YairReyesQuiroz"
+            },
+            "urls": [
+              "https://t.co/MA36wxKGFD"
+            ],
+            "mentions": [],
+            "retweet_count": 0,
+            "id": 888121759500705800,
+            "id_str": "888121759500705792"
+          }
+        }
+      ]
+    }
+  }
+
+Elasticsearch DEBUG: 2017-07-21T18:04:00Z
+  Request complete
+

@@ -1,0 +1,261 @@
+Elasticsearch INFO: 2017-07-21T18:03:59Z
+  Adding connection to http://search-es-twitter-stream-dev-rzmtjuphpnhuukihhzbhwqtapm.us-west-2.es.amazonaws.com/
+
+Elasticsearch DEBUG: 2017-07-21T18:03:59Z
+  starting request {
+    "method": "POST",
+    "path": "/twitter_dev/tweet/_search",
+    "body": {
+      "query": {
+        "term": {
+          "user.screen_name": "ReneeEdwards23"
+        }
+      }
+    },
+    "query": {
+      "size": 3
+    }
+  }
+  
+
+Elasticsearch DEBUG: 2017-07-21T18:03:59Z
+  starting request {
+    "method": "POST",
+    "path": "/twitter_dev/tweet/_search",
+    "body": {
+      "query": {
+        "match": {
+          "user.screen_name": "ReneeEdwards23"
+        }
+      }
+    },
+    "query": {
+      "size": 3
+    }
+  }
+  
+
+Elasticsearch TRACE: 2017-07-21T18:03:59Z
+  -> POST http://search-es-twitter-stream-dev-rzmtjuphpnhuukihhzbhwqtapm.us-west-2.es.amazonaws.com:80/twitter_dev/tweet/_search?size=3
+  {
+    "query": {
+      "term": {
+        "user.screen_name": "ReneeEdwards23"
+      }
+    }
+  }
+  <- 200
+  {
+    "took": 2,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 0,
+      "max_score": null,
+      "hits": []
+    }
+  }
+
+Elasticsearch DEBUG: 2017-07-21T18:03:59Z
+  Request complete
+
+Elasticsearch TRACE: 2017-07-21T18:03:59Z
+  -> POST http://search-es-twitter-stream-dev-rzmtjuphpnhuukihhzbhwqtapm.us-west-2.es.amazonaws.com:80/twitter_dev/tweet/_search?size=3
+  {
+    "query": {
+      "match": {
+        "user.screen_name": "ReneeEdwards23"
+      }
+    }
+  }
+  <- 200
+  {
+    "took": 1,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 3,
+      "max_score": 12.094567,
+      "hits": [
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "888098998308843520",
+          "_score": 12.094567,
+          "_source": {
+            "text": "I am looking for a buyer on 3 S. Arroyo Road Cerrillos, NM #SantaFe #NM  #realestate https://t.co/SArtzyZ3Uv https://t.co/elOaw61i28",
+            "created_at": "Thu Jul 20 18:11:15 +0000 2017",
+            "hashtags": [
+              "SantaFe",
+              "NM",
+              "realestate"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -106.15534,
+                35.40309
+              ]
+            },
+            "timestamp_ms": "1500574275935",
+            "user_mentions": {
+              "screen_name": [],
+              "id": [],
+              "name": [],
+              "id_str": []
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 3,
+              "description": "You have a friend in Real Estate!  Providing information on Santa Fe trends and market news.  (505) 470-7773",
+              "friends_count": 38,
+              "url": "http://www.renee-edwards.com/",
+              "created_at": "Fri Feb 03 04:30:32 +0000 2012",
+              "location": "Santa Fe, NM",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000837830393/b7efece2a9f6f748379a2708a8738244_normal.jpeg",
+              "name": "Renee Edwards",
+              "followers_count": 84,
+              "time_zone": null,
+              "id_str": "481760387",
+              "statuses_count": 267,
+              "listed_count": 13,
+              "id": 481760387,
+              "screen_name": "ReneeEdwards23"
+            },
+            "urls": [
+              "https://t.co/SArtzyZ3Uv"
+            ],
+            "mentions": [],
+            "retweet_count": 0,
+            "id": 888098998308843500,
+            "id_str": "888098998308843520"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "888073880467681280",
+          "_score": 11.585767,
+          "_source": {
+            "text": "Check out my newest listing in #SantaFe! Tell me what you think!  #realestate https://t.co/szY9hBbzvp https://t.co/7Nalbu5sS8",
+            "created_at": "Thu Jul 20 16:31:27 +0000 2017",
+            "hashtags": [
+              "SantaFe",
+              "realestate"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -106.05729,
+                35.6227
+              ]
+            },
+            "timestamp_ms": "1500568287375",
+            "user_mentions": {
+              "screen_name": [],
+              "id": [],
+              "name": [],
+              "id_str": []
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 3,
+              "description": "You have a friend in Real Estate!  Providing information on Santa Fe trends and market news.  (505) 470-7773",
+              "friends_count": 38,
+              "url": "http://www.renee-edwards.com/",
+              "created_at": "Fri Feb 03 04:30:32 +0000 2012",
+              "location": "Santa Fe, NM",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000837830393/b7efece2a9f6f748379a2708a8738244_normal.jpeg",
+              "name": "Renee Edwards",
+              "followers_count": 84,
+              "time_zone": null,
+              "id_str": "481760387",
+              "statuses_count": 266,
+              "listed_count": 13,
+              "id": 481760387,
+              "screen_name": "ReneeEdwards23"
+            },
+            "urls": [
+              "https://t.co/szY9hBbzvp"
+            ],
+            "mentions": [],
+            "retweet_count": 0,
+            "id": 888073880467681300,
+            "id_str": "888073880467681280"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "888138791520681984",
+          "_score": 11.585767,
+          "_source": {
+            "text": "See a virtual tour of my listing on 3 Caliente Rd Unit 7 #SantaFe #NM  #realestate https://t.co/1HJabloQcO https://t.co/u6IAeNvO7F",
+            "created_at": "Thu Jul 20 20:49:23 +0000 2017",
+            "hashtags": [
+              "SantaFe",
+              "NM",
+              "realestate"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -105.89117,
+                35.53688
+              ]
+            },
+            "timestamp_ms": "1500583763376",
+            "user_mentions": {
+              "screen_name": [],
+              "id": [],
+              "name": [],
+              "id_str": []
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 3,
+              "description": "You have a friend in Real Estate!  Providing information on Santa Fe trends and market news.  (505) 470-7773",
+              "friends_count": 38,
+              "url": "http://www.renee-edwards.com/",
+              "created_at": "Fri Feb 03 04:30:32 +0000 2012",
+              "location": "Santa Fe, NM",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000837830393/b7efece2a9f6f748379a2708a8738244_normal.jpeg",
+              "name": "Renee Edwards",
+              "followers_count": 84,
+              "time_zone": null,
+              "id_str": "481760387",
+              "statuses_count": 268,
+              "listed_count": 13,
+              "id": 481760387,
+              "screen_name": "ReneeEdwards23"
+            },
+            "urls": [
+              "https://t.co/1HJabloQcO"
+            ],
+            "mentions": [],
+            "retweet_count": 0,
+            "id": 888138791520682000,
+            "id_str": "888138791520681984"
+          }
+        }
+      ]
+    }
+  }
+
+Elasticsearch DEBUG: 2017-07-21T18:03:59Z
+  Request complete
+

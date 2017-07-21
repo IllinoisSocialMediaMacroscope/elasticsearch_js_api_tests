@@ -1,0 +1,1389 @@
+Elasticsearch INFO: 2017-07-20T14:15:25Z
+  Adding connection to http://search-es-twitter-stream-dev-rzmtjuphpnhuukihhzbhwqtapm.us-west-2.es.amazonaws.com/
+
+Elasticsearch DEBUG: 2017-07-20T14:15:25Z
+  starting request {
+    "method": "HEAD",
+    "requestTimeout": 30000,
+    "castExists": true,
+    "path": "/",
+    "query": {}
+  }
+  
+
+Elasticsearch DEBUG: 2017-07-20T14:15:25Z
+  starting request {
+    "method": "POST",
+    "path": "/twitter_dev/tweet/_search",
+    "body": {
+      "query": {
+        "match": {
+          "user_mentions.name": "Abby"
+        }
+      }
+    },
+    "query": {
+      "size": 20
+    }
+  }
+  
+
+Elasticsearch TRACE: 2017-07-20T14:15:25Z
+  -> HEAD http://search-es-twitter-stream-dev-rzmtjuphpnhuukihhzbhwqtapm.us-west-2.es.amazonaws.com:80/
+  
+  <- 200
+  
+
+Elasticsearch DEBUG: 2017-07-20T14:15:25Z
+  Request complete
+
+All is well
+Elasticsearch TRACE: 2017-07-20T14:15:26Z
+  -> POST http://search-es-twitter-stream-dev-rzmtjuphpnhuukihhzbhwqtapm.us-west-2.es.amazonaws.com:80/twitter_dev/tweet/_search?size=20
+  {
+    "query": {
+      "match": {
+        "user_mentions.name": "Abby"
+      }
+    }
+  }
+  <- 200
+  {
+    "took": 8,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 20,
+      "max_score": 8.266761,
+      "hits": [
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887807546735702016",
+          "_score": 8.266761,
+          "_source": {
+            "text": "hey @abbybedard_31 👀 @ World\u0027s End Reservation https://t.co/8SKsPDHW3G",
+            "created_at": "Wed Jul 19 22:53:08 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -70.873043,
+                42.256914
+              ]
+            },
+            "timestamp_ms": "1500504788465",
+            "user_mentions": {
+              "screen_name": [
+                "abbybedard_31"
+              ],
+              "id": [
+                1726171736
+              ],
+              "name": [
+                "Abby Bedard"
+              ],
+              "id_str": [
+                "1726171736"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 2621,
+              "description": "WB \u002717 | TCU \u002721 | sc: emmabedard3",
+              "friends_count": 243,
+              "url": "http://emmabedard3.vsco.co",
+              "created_at": "Sun Feb 23 17:33:49 +0000 2014",
+              "location": null,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/879554527996907520/bwHmExRD_normal.jpg",
+              "name": "Emma Bedard",
+              "followers_count": 229,
+              "time_zone": null,
+              "id_str": "2358280824",
+              "statuses_count": 607,
+              "listed_count": 0,
+              "id": 2358280824,
+              "screen_name": "embedard"
+            },
+            "urls": [
+              "https://t.co/8SKsPDHW3G"
+            ],
+            "mentions": [
+              "@abbybedard_31",
+              "@"
+            ],
+            "retweet_count": 0,
+            "id": 887807546735702000,
+            "id_str": "887807546735702016"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887737651352272896",
+          "_score": 8.266761,
+          "_source": {
+            "text": "Jack\u0027s Abby Fire in the Ham on tap now. https://t.co/CI2kgWz19o @jacksabby #frauncestavern #BeerMenus",
+            "created_at": "Wed Jul 19 18:15:24 +0000 2017",
+            "hashtags": [
+              "frauncestavern",
+              "BeerMenus"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -74.0113373,
+                40.7033945
+              ]
+            },
+            "timestamp_ms": "1500488124107",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby"
+              ],
+              "id": [
+                303941121
+              ],
+              "name": [
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 320,
+              "description": "Revolutionary since 1762. New York\u0027s historic tavern selling the finest American craft beer alongside Ireland\u0027s Porterhouse stouts.",
+              "friends_count": 938,
+              "url": "http://www.frauncestavern.com/",
+              "created_at": "Mon Jan 31 19:18:57 +0000 2011",
+              "location": "54 Pearl St, New York, 10004",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/711983920179486721/iFUws9xf_normal.jpg",
+              "name": "Fraunces Tavern",
+              "followers_count": 866,
+              "time_zone": "Eastern Time (US & Canada)",
+              "id_str": "245465291",
+              "statuses_count": 2726,
+              "listed_count": 28,
+              "id": 245465291,
+              "screen_name": "Porterhouse_FT"
+            },
+            "urls": [
+              "https://t.co/CI2kgWz19o"
+            ],
+            "mentions": [
+              "@jacksabby"
+            ],
+            "retweet_count": 0,
+            "id": 887737651352272900,
+            "id_str": "887737651352272896"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887382113472970752",
+          "_score": 8.034718,
+          "_source": {
+            "text": "Jack\u0027s Abby/Finback Spill the Tea growlers now available. https://t.co/HqW754rjVZ @jacksabby #BeerMenus",
+            "created_at": "Tue Jul 18 18:42:37 +0000 2017",
+            "hashtags": [
+              "BeerMenus"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -73.9917472,
+                40.6844345
+              ]
+            },
+            "timestamp_ms": "1500403357271",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby"
+              ],
+              "id": [
+                303941121
+              ],
+              "name": [
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 243,
+              "description": "Purveyors of fine cheeses, meats and beers.",
+              "friends_count": 229,
+              "url": "http://stinkybklyn.com",
+              "created_at": "Thu Sep 03 17:43:24 +0000 2009",
+              "location": "215 Smith Street 11201",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/588760822089797632/6Y8Tcg13_normal.jpg",
+              "name": "Stinky Bklyn",
+              "followers_count": 4137,
+              "time_zone": null,
+              "id_str": "71312300",
+              "statuses_count": 2770,
+              "listed_count": 175,
+              "id": 71312300,
+              "screen_name": "StinkyBklyn"
+            },
+            "urls": [
+              "https://t.co/HqW754rjVZ"
+            ],
+            "mentions": [
+              "@jacksabby"
+            ],
+            "retweet_count": 0,
+            "id": 887382113472970800,
+            "id_str": "887382113472970752"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887714199161491456",
+          "_score": 8.034718,
+          "_source": {
+            "text": "Smoothie POW💥 with this raspberry sorbet #powbab baobab combination by @abby_harris7!  She… https://t.co/YJCRWUtQYo",
+            "created_at": "Wed Jul 19 16:42:12 +0000 2017",
+            "hashtags": [
+              "powbab"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -87.95199394,
+                41.84186356
+              ]
+            },
+            "timestamp_ms": "1500482532669",
+            "user_mentions": {
+              "screen_name": [
+                "abby_harris7"
+              ],
+              "id": [
+                591501984
+              ],
+              "name": [
+                "Abby Harris"
+              ],
+              "id_str": [
+                "591501984"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 166,
+              "description": "Superfood company focused on Baobab. Mission is to make products as natural as possible. Superfood powder, chews, and skin care oil made with power of baobab.",
+              "friends_count": 414,
+              "url": "http://powbab.com",
+              "created_at": "Mon Jan 24 00:49:26 +0000 2011",
+              "location": "Oak Brook, IL",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/427636933959757824/VnEHj7iG_normal.png",
+              "name": "powbab",
+              "followers_count": 402,
+              "time_zone": "Central Time (US & Canada)",
+              "id_str": "242123838",
+              "statuses_count": 939,
+              "listed_count": 14,
+              "id": 242123838,
+              "screen_name": "powbab"
+            },
+            "urls": [
+              "https://t.co/YJCRWUtQYo"
+            ],
+            "mentions": [
+              "@abby_harris7"
+            ],
+            "retweet_count": 0,
+            "id": 887714199161491500,
+            "id_str": "887714199161491456"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887301790399594500",
+          "_score": 7.973701,
+          "_source": {
+            "text": "Drinking a Cranberry Berliner Sour Wheat Lager by @jacksabby @ Blueberry Capitol If The World — https://t.co/9RF0p4yDWJ",
+            "created_at": "Tue Jul 18 13:23:26 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -74.8112,
+                39.6294
+              ]
+            },
+            "timestamp_ms": "1500384206758",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby"
+              ],
+              "id": [
+                303941121
+              ],
+              "name": [
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 408,
+              "description": "All I wear are fedoras. I sleep in Versace PJs. I smell like mahogany. I\u0027ve been struck by lightning twice. I only have silver utensils in my house.",
+              "friends_count": 765,
+              "url": null,
+              "created_at": "Tue Jun 09 18:27:35 +0000 2009",
+              "location": "Glassboro NJ/State College PA",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/480120685298466816/27LY3C0F_normal.jpeg",
+              "name": "Raoul Duke ☹",
+              "followers_count": 162,
+              "time_zone": "Eastern Time (US & Canada)",
+              "id_str": "45903578",
+              "statuses_count": 6946,
+              "listed_count": 8,
+              "id": 45903578,
+              "screen_name": "EricHuttemann77"
+            },
+            "urls": [
+              "https://t.co/9RF0p4yDWJ"
+            ],
+            "mentions": [
+              "@jacksabby",
+              "@"
+            ],
+            "retweet_count": 0,
+            "id": 887301790399594500,
+            "id_str": "887301790399594500"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887418399722262532",
+          "_score": 7.973701,
+          "_source": {
+            "text": "Work beer for today, @JacksAbby will do just fine!!!\n#therochardnyc #therochardbuildout… https://t.co/Lt81NeQgyz",
+            "created_at": "Tue Jul 18 21:06:48 +0000 2017",
+            "hashtags": [
+              "therochardnyc",
+              "therochardbuildout"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -73.9505,
+                40.78671
+              ]
+            },
+            "timestamp_ms": "1500412008587",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby"
+              ],
+              "id": [
+                303941121
+              ],
+              "name": [
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 9321,
+              "description": "#BarFather @beerlylegalgrp @AlewifeNYC @AlewifeBrewCo @FoolsGoldNYC @TheJeffreyNYC @TheRochardNYC #ceo #investor #IrishImmigrant #Ballyshannon #patroznyc",
+              "friends_count": 3511,
+              "url": null,
+              "created_at": "Mon Jul 06 16:15:53 +0000 2009",
+              "location": "Manhattan, NY",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/882831443646435329/hz4L6NC3_normal.jpg",
+              "name": "Patrick Donagher",
+              "followers_count": 3318,
+              "time_zone": "Quito",
+              "id_str": "54249904",
+              "statuses_count": 19714,
+              "listed_count": 157,
+              "id": 54249904,
+              "screen_name": "PatricksBeer"
+            },
+            "urls": [
+              "https://t.co/Lt81NeQgyz"
+            ],
+            "mentions": [
+              "@JacksAbby"
+            ],
+            "retweet_count": 0,
+            "id": 887418399722262500,
+            "id_str": "887418399722262532"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887131617470402565",
+          "_score": 7.582867,
+          "_source": {
+            "text": "Drinking a Hoponius Union by @jacksabby @ Crazy Harry\u0027s Bar — https://t.co/M4YLc78FP7",
+            "created_at": "Tue Jul 18 02:07:14 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -118.572,
+                34.2082
+              ]
+            },
+            "timestamp_ms": "1500343634370",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby"
+              ],
+              "id": [
+                303941121
+              ],
+              "name": [
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 256,
+              "description": "Crazy Harry\u0027s Bar is a Beer Lover\u0027s Paradise with the Best Rotating Tap Selection in the West San Fernando Valley!",
+              "friends_count": 70,
+              "url": "http://crazyharrysbar.com",
+              "created_at": "Wed Apr 04 21:38:44 +0000 2012",
+              "location": "Winnetka, California",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/2037862848/Finalblacklogo_2_normal.jpg",
+              "name": "Crazy Harry\u0027s Bar",
+              "followers_count": 180,
+              "time_zone": "Pacific Time (US & Canada)",
+              "id_str": "545461390",
+              "statuses_count": 1011,
+              "listed_count": 7,
+              "id": 545461390,
+              "screen_name": "CrazyHarrysBar"
+            },
+            "urls": [
+              "https://t.co/M4YLc78FP7"
+            ],
+            "mentions": [
+              "@jacksabby",
+              "@"
+            ],
+            "retweet_count": 0,
+            "id": 887131617470402600,
+            "id_str": "887131617470402565"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887364171750412289",
+          "_score": 7.582867,
+          "_source": {
+            "text": "Drinking a BBC 20th Anniversary by @jacksabby @   British Beer Company - Hyannis — https://t.co/ZWBKWk8iKB",
+            "created_at": "Tue Jul 18 17:31:19 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -70.2848,
+                41.6525
+              ]
+            },
+            "timestamp_ms": "1500399079631",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby"
+              ],
+              "id": [
+                303941121
+              ],
+              "name": [
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 355,
+              "description": "Suddenly, I have lots of free time and less money. I think I\u0027ll have a drink.",
+              "friends_count": 123,
+              "url": "http://www.drunkandunemployed.com",
+              "created_at": "Mon Dec 07 08:13:57 +0000 2009",
+              "location": "New York",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/575612660/Man-Enjoying-a-Drink_normal.png",
+              "name": "Drunk & Unemployed",
+              "followers_count": 232,
+              "time_zone": "Eastern Time (US & Canada)",
+              "id_str": "95161088",
+              "statuses_count": 1932,
+              "listed_count": 6,
+              "id": 95161088,
+              "screen_name": "fervere_ferment"
+            },
+            "urls": [
+              "https://t.co/ZWBKWk8iKB"
+            ],
+            "mentions": [
+              "@jacksabby",
+              "@"
+            ],
+            "retweet_count": 0,
+            "id": 887364171750412300,
+            "id_str": "887364171750412289"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887486479894794240",
+          "_score": 7.582867,
+          "_source": {
+            "text": "Jack\u0027s Abby/Finback Spill the Tea on tap now. https://t.co/FMOeJ4tsQz @jacksabby #nocoorslight #intheberkshires #BeerMenus",
+            "created_at": "Wed Jul 19 01:37:20 +0000 2017",
+            "hashtags": [
+              "nocoorslight",
+              "intheberkshires",
+              "BeerMenus"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -73.2499096,
+                42.3058399
+              ]
+            },
+            "timestamp_ms": "1500428240165",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby"
+              ],
+              "id": [
+                303941121
+              ],
+              "name": [
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 99,
+              "description": "No Coors Light",
+              "friends_count": 476,
+              "url": "http://www.nocoorslight.com",
+              "created_at": "Wed Jan 21 23:10:22 +0000 2009",
+              "location": "Mass Pike Exit 2",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/820812483485122561/NfFzVKYG_normal.jpg",
+              "name": "Moe\u0027s Tavern",
+              "followers_count": 743,
+              "time_zone": "Eastern Time (US & Canada)",
+              "id_str": "19313945",
+              "statuses_count": 1765,
+              "listed_count": 25,
+              "id": 19313945,
+              "screen_name": "NoCoorsLight"
+            },
+            "urls": [
+              "https://t.co/FMOeJ4tsQz"
+            ],
+            "mentions": [
+              "@jacksabby"
+            ],
+            "retweet_count": 0,
+            "id": 887486479894794200,
+            "id_str": "887486479894794240"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887798466415644672",
+          "_score": 7.582867,
+          "_source": {
+            "text": "Jack\u0027s Abby Cranberry Berliner on tap now. https://t.co/xuelH3dKF6 @jacksabby #destinationdewdrop #dewdropinnct #BeerMenus",
+            "created_at": "Wed Jul 19 22:17:03 +0000 2017",
+            "hashtags": [
+              "destinationdewdrop",
+              "dewdropinnct",
+              "BeerMenus"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -73.0962791,
+                41.3246022
+              ]
+            },
+            "timestamp_ms": "1500502623548",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby"
+              ],
+              "id": [
+                303941121
+              ],
+              "name": [
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 547,
+              "description": "20 Taps of cold craft beer, wings, burgers and a great time will be had by all.",
+              "friends_count": 277,
+              "url": "https://www.facebook.com/Dewdropinnct",
+              "created_at": "Mon Jan 28 14:11:13 +0000 2013",
+              "location": "Derby, Connecticut",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/3174852799/cfe78370191563c8b08cea46bf8d6f0c_normal.jpeg",
+              "name": "Dew Drop Inn",
+              "followers_count": 432,
+              "time_zone": "Eastern Time (US & Canada)",
+              "id_str": "1128173808",
+              "statuses_count": 864,
+              "listed_count": 19,
+              "id": 1128173808,
+              "screen_name": "DewDropInnCT"
+            },
+            "urls": [
+              "https://t.co/xuelH3dKF6"
+            ],
+            "mentions": [
+              "@jacksabby"
+            ],
+            "retweet_count": 0,
+            "id": 887798466415644700,
+            "id_str": "887798466415644672"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887807427965587457",
+          "_score": 7.582867,
+          "_source": {
+            "text": "Picnic beers. - Drinking a Sunny Ridge Pilsner by @jacksabby @ Como Park Disc Golf Course  — https://t.co/CEGMIYpNCq",
+            "created_at": "Wed Jul 19 22:52:40 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -78.6625,
+                42.8908
+              ]
+            },
+            "timestamp_ms": "1500504760148",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby"
+              ],
+              "id": [
+                303941121
+              ],
+              "name": [
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 2,
+              "description": null,
+              "friends_count": 98,
+              "url": null,
+              "created_at": "Tue May 05 02:16:40 +0000 2009",
+              "location": null,
+              "profile_image_url": "http://pbs.twimg.com/profile_images/1540405642/NtBWzR44_normal",
+              "name": "Paul Riter",
+              "followers_count": 24,
+              "time_zone": "Eastern Time (US & Canada)",
+              "id_str": "37831405",
+              "statuses_count": 504,
+              "listed_count": 1,
+              "id": 37831405,
+              "screen_name": "whirlygigger"
+            },
+            "urls": [
+              "https://t.co/CEGMIYpNCq"
+            ],
+            "mentions": [
+              "@jacksabby",
+              "@"
+            ],
+            "retweet_count": 0,
+            "id": 887807427965587500,
+            "id_str": "887807427965587457"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887026862836330498",
+          "_score": 6.7490296,
+          "_source": {
+            "text": "@abbydphillip \nThose pesky child labor laws kinda get in the way.  Right Ivanka?",
+            "created_at": "Mon Jul 17 19:10:58 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": "887024464864608259",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -94.6407672,
+                38.9304114
+              ]
+            },
+            "timestamp_ms": "1500318658919",
+            "user_mentions": {
+              "screen_name": [
+                "abbydphillip"
+              ],
+              "id": [
+                126722715
+              ],
+              "name": [
+                "Abby D. Phillip"
+              ],
+              "id_str": [
+                "126722715"
+              ]
+            },
+            "in_reply_to_user_id_str": "126722715",
+            "in_reply_to_screen_name": "abbydphillip",
+            "user": {
+              "favourites_count": 713,
+              "description": "Project Manager, Sailor, Photographer.  Jayhawk Fan",
+              "friends_count": 829,
+              "url": "http://mgatewood.com",
+              "created_at": "Thu Apr 08 17:21:55 +0000 2010",
+              "location": "Lawrence, KS",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/863881858404110336/k2S0dI6q_normal.jpg",
+              "name": "Matt Gatewood ⚛️",
+              "followers_count": 172,
+              "time_zone": "Central Time (US & Canada)",
+              "id_str": "130897758",
+              "statuses_count": 894,
+              "listed_count": 5,
+              "id": 130897758,
+              "screen_name": "MattRGate"
+            },
+            "urls": [],
+            "mentions": [
+              "@abbydphillip"
+            ],
+            "retweet_count": 0,
+            "id": 887026862836330500,
+            "id_str": "887026862836330498"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887101777719562243",
+          "_score": 6.7463923,
+          "_source": {
+            "text": "Flowers and herbs - Drinking a Spill the Tea by @finbackbrewery/@jacksabby @ Astoria, NY  — https://t.co/UWqBM8AIiZ #photo",
+            "created_at": "Tue Jul 18 00:08:40 +0000 2017",
+            "hashtags": [
+              "photo"
+            ],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -73.9301,
+                40.7718
+              ]
+            },
+            "timestamp_ms": "1500336520019",
+            "user_mentions": {
+              "screen_name": [
+                "finbackbrewery",
+                "JacksAbby"
+              ],
+              "id": [
+                1072572524,
+                303941121
+              ],
+              "name": [
+                "FinbackBrewery",
+                "Jack\u0027s Abby"
+              ],
+              "id_str": [
+                "1072572524",
+                "303941121"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 87,
+              "description": "Coffee maker at Rex ★ NYC",
+              "friends_count": 372,
+              "url": "https://twitter.com/rexcoffeenyc",
+              "created_at": "Wed Jan 11 05:26:28 +0000 2012",
+              "location": "Astoria, Queens",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/1747375037/IJw02Fb5_normal",
+              "name": "Brian Tragno",
+              "followers_count": 133,
+              "time_zone": "Eastern Time (US & Canada)",
+              "id_str": "460841923",
+              "statuses_count": 745,
+              "listed_count": 8,
+              "id": 460841923,
+              "screen_name": "btragno"
+            },
+            "urls": [
+              "https://t.co/UWqBM8AIiZ"
+            ],
+            "mentions": [
+              "@finbackbrewery",
+              "@jacksabby",
+              "@"
+            ],
+            "retweet_count": 0,
+            "id": 887101777719562200,
+            "id_str": "887101777719562243"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887820944047316994",
+          "_score": 6.7463923,
+          "_source": {
+            "text": "Drinking a Spill the Tea by @finbackbrewery/@jacksabby at @finbackbrewery — https://t.co/wjrg7OC21A",
+            "created_at": "Wed Jul 19 23:46:22 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -73.8733,
+                40.7067
+              ]
+            },
+            "timestamp_ms": "1500507982633",
+            "user_mentions": {
+              "screen_name": [
+                "finbackbrewery",
+                "JacksAbby",
+                "finbackbrewery"
+              ],
+              "id": [
+                1072572524,
+                303941121,
+                1072572524
+              ],
+              "name": [
+                "FinbackBrewery",
+                "Jack\u0027s Abby",
+                "FinbackBrewery"
+              ],
+              "id_str": [
+                "1072572524",
+                "303941121",
+                "1072572524"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 188,
+              "description": "Everyday is a beautiful day!",
+              "friends_count": 375,
+              "url": null,
+              "created_at": "Fri Sep 26 22:35:11 +0000 2008",
+              "location": "New York, NY",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/568539121082437633/qQ-lxQWw_normal.jpeg",
+              "name": "Todd Barnes",
+              "followers_count": 259,
+              "time_zone": "Eastern Time (US & Canada)",
+              "id_str": "16476308",
+              "statuses_count": 10115,
+              "listed_count": 12,
+              "id": 16476308,
+              "screen_name": "ToddBarnes86"
+            },
+            "urls": [
+              "https://t.co/wjrg7OC21A"
+            ],
+            "mentions": [
+              "@finbackbrewery",
+              "@jacksabby",
+              "@finbackbrewery"
+            ],
+            "retweet_count": 0,
+            "id": 887820944047317000,
+            "id_str": "887820944047316994"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887096772274917377",
+          "_score": 6.5620894,
+          "_source": {
+            "text": "@abbydphillip Aren\u0027t all of these Senators guaranteed yes votes? https://t.co/DXe3XndIWk",
+            "created_at": "Mon Jul 17 23:48:46 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": "887079066033147906",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -90.25795796,
+                38.64238762
+              ]
+            },
+            "timestamp_ms": "1500335326628",
+            "user_mentions": {
+              "screen_name": [
+                "abbydphillip"
+              ],
+              "id": [
+                126722715
+              ],
+              "name": [
+                "Abby D. Phillip"
+              ],
+              "id_str": [
+                "126722715"
+              ]
+            },
+            "in_reply_to_user_id_str": "126722715",
+            "in_reply_to_screen_name": "abbydphillip",
+            "user": {
+              "favourites_count": 234,
+              "description": "The wit and wisdom of Don Ward. Public intellectual, philanthropist, raconteur, Cardinals fan and minor Internet celebrity. The typos keep it real.",
+              "friends_count": 392,
+              "url": null,
+              "created_at": "Sun Apr 06 17:37:12 +0000 2008",
+              "location": "St Louis, MO",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/764198975155032064/OXxD2zdM_normal.jpg",
+              "name": "Don Ward",
+              "followers_count": 236,
+              "time_zone": "Central Time (US & Canada)",
+              "id_str": "14316615",
+              "statuses_count": 10193,
+              "listed_count": 21,
+              "id": 14316615,
+              "screen_name": "dwward"
+            },
+            "urls": [
+              "https://t.co/DXe3XndIWk"
+            ],
+            "mentions": [
+              "@abbydphillip"
+            ],
+            "retweet_count": 0,
+            "id": 887096772274917400,
+            "id_str": "887096772274917377"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887487897120722944",
+          "_score": 6.1779776,
+          "_source": {
+            "text": "Drinking a Spill the Tea by @jacksabby/@finbackbrewery @ Mount Ida — https://t.co/QQoMyPyI3o",
+            "created_at": "Wed Jul 19 01:42:58 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -71.0631,
+                42.3026
+              ]
+            },
+            "timestamp_ms": "1500428578058",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby",
+                "finbackbrewery"
+              ],
+              "id": [
+                303941121,
+                1072572524
+              ],
+              "name": [
+                "Jack\u0027s Abby",
+                "FinbackBrewery"
+              ],
+              "id_str": [
+                "303941121",
+                "1072572524"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 572,
+              "description": null,
+              "friends_count": 840,
+              "url": null,
+              "created_at": "Mon Nov 21 00:43:31 +0000 2011",
+              "location": "dorchester, ma",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/3533618180/bb7977971fdc2e80c1d4ce5b66d87961_normal.jpeg",
+              "name": "Drew Shalian",
+              "followers_count": 429,
+              "time_zone": null,
+              "id_str": "417488207",
+              "statuses_count": 7103,
+              "listed_count": 35,
+              "id": 417488207,
+              "screen_name": "DrewShal9"
+            },
+            "urls": [
+              "https://t.co/QQoMyPyI3o"
+            ],
+            "mentions": [
+              "@jacksabby",
+              "@finbackbrewery",
+              "@"
+            ],
+            "retweet_count": 0,
+            "id": 887487897120723000,
+            "id_str": "887487897120722944"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887865415111766017",
+          "_score": 5.6772695,
+          "_source": {
+            "text": "Drinking a Coffee Smoke &amp; Dagger by @jacksabby at @buskers_pub — https://t.co/6By0CB65SC",
+            "created_at": "Thu Jul 20 02:43:05 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -71.3151,
+                41.4885
+              ]
+            },
+            "timestamp_ms": "1500518585361",
+            "user_mentions": {
+              "screen_name": [
+                "JacksAbby",
+                "buskers_pub"
+              ],
+              "id": [
+                303941121,
+                3293208937
+              ],
+              "name": [
+                "Jack\u0027s Abby",
+                "Buskers Irish pub"
+              ],
+              "id_str": [
+                "303941121",
+                "3293208937"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 727,
+              "description": "Drink Newport is Newport, RI\u0027s online source for matters beer, wine and liquor. If you want to know what to drink and where to drink it, follow away!",
+              "friends_count": 508,
+              "url": null,
+              "created_at": "Sat Jan 12 08:41:33 +0000 2013",
+              "location": "Newport, RI",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/855541399135150084/u4Epr8p__normal.jpg",
+              "name": "Drink Newport",
+              "followers_count": 819,
+              "time_zone": null,
+              "id_str": "1082307584",
+              "statuses_count": 4839,
+              "listed_count": 32,
+              "id": 1082307584,
+              "screen_name": "DrinkNewport"
+            },
+            "urls": [
+              "https://t.co/6By0CB65SC"
+            ],
+            "mentions": [
+              "@jacksabby",
+              "@buskers_pub"
+            ],
+            "retweet_count": 0,
+            "id": 887865415111766000,
+            "id_str": "887865415111766017"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887509875349172224",
+          "_score": 4.8269167,
+          "_source": {
+            "text": "Drinking a Spill the Tea by @finbackbrewery/@jacksabby at @bottlebareast — https://t.co/Tu1jxlPskc",
+            "created_at": "Wed Jul 19 03:10:18 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -75.1346,
+                39.9705
+              ]
+            },
+            "timestamp_ms": "1500433818076",
+            "user_mentions": {
+              "screen_name": [
+                "finbackbrewery",
+                "JacksAbby",
+                "Bottlebareast"
+              ],
+              "id": [
+                1072572524,
+                303941121,
+                762358045
+              ],
+              "name": [
+                "FinbackBrewery",
+                "Jack\u0027s Abby",
+                "Bottle Bar East"
+              ],
+              "id_str": [
+                "1072572524",
+                "303941121",
+                "762358045"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 101,
+              "description": "dogs, beers, random boob shots",
+              "friends_count": 21,
+              "url": null,
+              "created_at": "Sat May 30 18:38:08 +0000 2009",
+              "location": "Philadelphia, PA",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/240278635/red_normal.jpg",
+              "name": "Hwick",
+              "followers_count": 21,
+              "time_zone": "Indiana (East)",
+              "id_str": "43571062",
+              "statuses_count": 2334,
+              "listed_count": 13,
+              "id": 43571062,
+              "screen_name": "swallybee"
+            },
+            "urls": [
+              "https://t.co/Tu1jxlPskc"
+            ],
+            "mentions": [
+              "@finbackbrewery",
+              "@jacksabby",
+              "@bottlebareast"
+            ],
+            "retweet_count": 0,
+            "id": 887509875349172200,
+            "id_str": "887509875349172224"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887083817164558336",
+          "_score": 4.643167,
+          "_source": {
+            "text": "Drinking a Spill the Tea by @finbackbrewery/@jacksabby at @railtrailfbco — https://t.co/4zN1lzXtRh",
+            "created_at": "Mon Jul 17 22:57:17 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -71.5693,
+                42.3912
+              ]
+            },
+            "timestamp_ms": "1500332237889",
+            "user_mentions": {
+              "screen_name": [
+                "finbackbrewery",
+                "JacksAbby",
+                "RailTrailFBCo"
+              ],
+              "id": [
+                1072572524,
+                303941121,
+                889400557
+              ],
+              "name": [
+                "FinbackBrewery",
+                "Jack\u0027s Abby",
+                "rail trail flatbread"
+              ],
+              "id_str": [
+                "1072572524",
+                "303941121",
+                "889400557"
+              ]
+            },
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+              "favourites_count": 1929,
+              "description": "Product Tester.  Rum drinker.  BDA fan.  Listener of the phish",
+              "friends_count": 379,
+              "url": null,
+              "created_at": "Mon Aug 10 02:50:37 +0000 2009",
+              "location": "in the sticks outside Boston",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/1646131434/image_normal.jpg",
+              "name": "DJK",
+              "followers_count": 113,
+              "time_zone": "Eastern Time (US & Canada)",
+              "id_str": "64320709",
+              "statuses_count": 2495,
+              "listed_count": 14,
+              "id": 64320709,
+              "screen_name": "the16v"
+            },
+            "urls": [
+              "https://t.co/4zN1lzXtRh"
+            ],
+            "mentions": [
+              "@finbackbrewery",
+              "@jacksabby",
+              "@railtrailfbco"
+            ],
+            "retweet_count": 0,
+            "id": 887083817164558300,
+            "id_str": "887083817164558336"
+          }
+        },
+        {
+          "_index": "twitter_dev",
+          "_type": "tweet",
+          "_id": "887727937033691136",
+          "_score": 4.643167,
+          "_source": {
+            "text": "@tipsyscoop made ice cream beer with @JacksAbby available today @lanternhall !!! House Lager… https://t.co/qQiFYXc1IB",
+            "created_at": "Wed Jul 19 17:36:48 +0000 2017",
+            "hashtags": [],
+            "in_reply_to_status_id_str": null,
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [
+                -73.9313431,
+                40.7061882
+              ]
+            },
+            "timestamp_ms": "1500485808033",
+            "user_mentions": {
+              "screen_name": [
+                "TipsyScoop",
+                "JacksAbby",
+                "LanternHall"
+              ],
+              "id": [
+                836746850,
+                303941121,
+                3198968895
+              ],
+              "name": [
+                "Tipsy Scoop",
+                "Jack\u0027s Abby",
+                "Lantern Hall"
+              ],
+              "id_str": [
+                "836746850",
+                "303941121",
+                "3198968895"
+              ]
+            },
+            "in_reply_to_user_id_str": "836746850",
+            "in_reply_to_screen_name": "TipsyScoop",
+            "user": {
+              "favourites_count": 510,
+              "description": "Jack\u0027s Abby NYC & Philly sales. Thoughts, opinions, bad grammar is mine own.",
+              "friends_count": 537,
+              "url": "http://www.jacksabby.com",
+              "created_at": "Sat Feb 06 00:42:13 +0000 2016",
+              "location": "Brooklyn, NY",
+              "profile_image_url": "http://pbs.twimg.com/profile_images/706867874909048832/CQthWI3H_normal.jpg",
+              "name": "Tim LaRosee",
+              "followers_count": 142,
+              "time_zone": null,
+              "id_str": "4879451141",
+              "statuses_count": 264,
+              "listed_count": 4,
+              "id": 4879451141,
+              "screen_name": "JacksAbbyTim"
+            },
+            "urls": [
+              "https://t.co/qQiFYXc1IB"
+            ],
+            "mentions": [
+              "@tipsyscoop",
+              "@JacksAbby",
+              "@lanternhall"
+            ],
+            "retweet_count": 0,
+            "id": 887727937033691100,
+            "id_str": "887727937033691136"
+          }
+        }
+      ]
+    }
+  }
+
+Elasticsearch DEBUG: 2017-07-20T14:15:26Z
+  Request complete
+
